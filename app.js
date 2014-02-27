@@ -82,4 +82,24 @@ twit.verifyCredentials(function (err, data) {
 		console.log("err: "+err+" "+code)
 	});
 });
+var SerialPort = serialport.SerialPort;
 
+<<<<<<< HEAD
+=======
+var sp = new SerialPort("/dev/ttyUSB0", {
+  baudrate: 115200,
+  bufferSize: 1024,
+  parser: serialport.parsers.readline("\n")
+}, false); // this is the openImmediately flag [default is true]
+
+serialPort.open(function () {
+  console.log('open');
+  serialPort.on('data', function(data) {
+    console.log(' ' + data);
+  });
+});
+
+
+
+
+>>>>>>> parent of dbad8d8... sp
